@@ -4,7 +4,6 @@ import sys
 # Add project root to path so imports work
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-
 from flask import Flask, request, jsonify, send_from_directory
 from bedrock_kb_rag import retrieve_and_generate, health_probe
 
