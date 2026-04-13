@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, render_template
 from bedrock_kb_rag import retrieve_and_generate, health_probe
 
 app = Flask(__name__, static_folder='../static', template_folder='../templates')
@@ -15,12 +15,13 @@ KB_TOP_K = int(os.getenv("KB_TOP_K", "5"))
 
 @app.route("/")
 def index():
-    return send_from_directory(app.template_folder, "index.html")
+    # return send_from_directory(app.template_folder, "index.html")
+    return render_template("index.html")
 
 
-@app.route("/static/<path:path>")
-def serve_static(path):
-    return send_from_directory(app.static_folder, path)
+# @app.route("/static/<path:path>")
+# def serve_static(path):
+#     return send_from_directory(app.static_folder, path)
 
 
 @app.route("/api/chat", methods=["POST"])
