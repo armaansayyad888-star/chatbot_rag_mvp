@@ -1,51 +1,39 @@
-# Flask Starter
+# Physics Chatbot
 
-Deploy your [Flask](https://flask.palletsprojects.com/) project to Vercel with zero configuration.
+## Description of the Project
+This project is a Physics Chatbot web application that allows users to ask physics-related questions and receive clear, accurate explanations. It is designed to help students understand physics concepts like mechanics, electricity, waves, and modern physics in a simple and interactive way.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=Deploy%20Python%20Flask%20applications%20with%20zero%20configuration.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F54Zhp672eFRUqepOakJ0qU%2F8894990170d1edb4a0287a0b7ce79dff%2FFlask_Light.png&demo-title=Flask%20Boilerplate&demo-url=https%3A%2F%2Fvercel-plus-flask.vercel.app%2F&from=templates&project-name=Flask%20Boilerplate&project-names=Comma%20separated%20list%20of%20project%20names%2Cto%20match%20the%20root-directories&repository-name=flask-python-boilerplate&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask&root-directories=List%20of%20directory%20paths%20for%20the%20directories%20to%20clone%20into%20projects&skippable-integrations=1&teamSlug=zero-conf-vtest314)
+The backend is built using Flask and connects to an AI model through AWS Bedrock to generate responses. The frontend provides a clean interface where users can type questions and get instant answers.
 
-_Live Example: https://vercel-plus-flask.vercel.app/_
+---
 
-Visit the [Flask documentation](https://flask.palletsprojects.com/) to learn more.
+## Project Link
+- Live Demo: https://chatbot-rag-mvp.vercel.app/
+- GitHub Repository: https://github.com/armaansayyad888-star/chatbot_rag_mvp
 
-## Getting Started
+---
 
-Install the required dependencies:
+## How to Test the Project
 
+### 1. Clone the Repository
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install .
-```
+git clone https://github.com/armaansayyad888-star/chatbot_rag_mvp.git
+cd chatbot_rag_mvp
+pip install -r requirements.txt
+python app.py
+http://127.0.0.1:5000
 
-Or, if using [uv](https://docs.astral.sh/uv/):
+Python / Flask
 
-```bash
-uv sync
-```
+Used for backend development, handling requests, and connecting the AI model.
 
+AWS Bedrock
 
-## Running Locally
+Used to generate AI-powered physics explanations and answers.
 
-Start the development server on http://0.0.0.0:5001
+HTML / CSS / JavaScript
 
-```bash
-python main.py
-# using uv:
-uv run main.py
-```
+Used for styling and frontend functionality.
 
-When you make changes to your project, the server will automatically reload.
-
-## Deploying to Vercel
-
-Deploy your project to Vercel with the following command:
-
-```bash
-npm install -g vercel
-vercel --prod
-```
-
-Or `git push` to your repository with our [git integration](https://vercel.com/docs/deployments/git).
-
-To view the source code for this template, [visit the example repository](https://github.com/vercel/vercel/tree/main/examples/flask).
+Contributors
+Armaan Sayyad — https://github.com/armaansayyad888-star
